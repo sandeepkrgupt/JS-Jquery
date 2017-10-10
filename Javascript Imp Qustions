@@ -19,6 +19,10 @@ var x;
 </script>
 output - 0 : "hello india"
          1 : "hello usa"
+WHEN WE DECLARE VARIABLES TO THE TOP IS CALLED HOISTING.
+Like -
+var x;
+x = ["hello india","hello usa"];
 ----------------------------------------------------------
 1. Data Types in Javascript ?
 
