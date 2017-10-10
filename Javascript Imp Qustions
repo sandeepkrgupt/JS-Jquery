@@ -59,16 +59,6 @@ output ["d","a","ee","ff","b","c"];
 var arr = ["d","a","b","c"];
 arr.splice(1,2); // start , length
 output ["d","a"];
-Differene between setTimeout and setInterval ?
-
-Ans - setTimeout execute the callback function after specific amount of time but setInterval executes function after regular interval.
-setTimeout(function(){
-console.log('i am using settimeout');
-},2000)
-
-setInterval(function(){
-console.log('am using serInterval');
-},1000);
 
 -------------------------------------------------------------
 ________________This and NaN______________________________
@@ -149,3 +139,13 @@ alert("hello all world");
 </script>
 
 
+=>Differene between setTimeout and setInterval ?
+
+Ans - setTimeout execute the callback function after specific amount of time but setInterval executes function after regular interval.
+setTimeout(function(){
+console.log('i am using settimeout');
+},2000)
+
+setInterval(function(){
+console.log('am using serInterval');
+},1000);
