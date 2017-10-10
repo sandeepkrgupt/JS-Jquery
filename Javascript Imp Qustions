@@ -262,6 +262,17 @@ jQuery( document ).ready(function( $ ) {
 // Code that uses other library's $ can follow here.
 </script>
 
+_______________________setTimeout and setInterval_______________________
 
+Ans - setTimeout execute the callback function after specific amount of time but setInterval executes function after regular interval.
+setTimeout(function(){
+console.log('i am using settimeout');
+},2000)
+
+setInterval(function(){
+console.log('am using serInterval');
+},1000);
+
+-------------------------------------------------------------
 
 
