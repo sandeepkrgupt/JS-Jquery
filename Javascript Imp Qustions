@@ -273,6 +273,20 @@ setInterval(function(){
 console.log('am using serInterval');
 },1000);
 
+______________________________Query Selector____________________________________
+
+The querySelector() method only returns the first element that matches the specified selectors. 
+To return all the matches, use the querySelectorAll() method instead.
+<p>para one</p>
+<p>para two</p>
+<p>para three</p>
+<button onclick="qselect()">click</button>
+
+<script>
+function qselect(){
+         document.querySelector("p").style.background = "black";
+}
+</script>
 ______________________________Json related______________________________________
 json.parse() - Converting from Json string to Json object 
 var obj = '{ id : 1,name : "rohit", class : 10 }' // this is string type object inside ' '
