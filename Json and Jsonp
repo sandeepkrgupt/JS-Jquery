@@ -1,0 +1,8 @@
+______________________________Json related______________________________________
+json.parse() - Converting from Json string to Json object 
+var obj = '{ id : 1,name : "rohit", class : 10 }' // this is string type object inside ' '
+var cvt = json.parse(obj);
+
+json.stringify() - Converts Json object into json string.
+var obj = { id : 1, name : "rohit", class : 10 } // this is object type 
+var cvt = json.stringify(obj);
