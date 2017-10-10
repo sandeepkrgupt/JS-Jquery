@@ -139,13 +139,30 @@ alert("hello all world");
 </script>
 
 
-=>Differene between setTimeout and setInterval ?
+--------------------------------------------------------------------
+____________________Stop default Action in Javascript______________
+preventDefault stops the default action or functionality like click of any link in anchor.
+<a href="www.w3school.com/angular.asp" id="link1">angular tutorial</a>
+<script>
+document.getElementById("link1").addEventListner('click',function(evnt){
+evnt.preventDefault();
+});
+</script>
 
-Ans - setTimeout execute the callback function after specific amount of time but setInterval executes function after regular interval.
-setTimeout(function(){
-console.log('i am using settimeout');
-},2000)
+__________________Very Very Importent_________________________________
+-----------------------------------------------------------------------
+___________________Javascript Hoisting________________________________
 
-setInterval(function(){
-console.log('am using serInterval');
-},1000);
+In javascript we can use variable before it is declared.
+or
+In JavaScript, a variable can be declared after it has been used.
+like 
+<script>
+x = "san";
+console.log(x);
+</script>
+output - san ( not undefined. )
+Hoisting is javascript default behavior of moving all declarations to the top of current script or function.
+
+
+
