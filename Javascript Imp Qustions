@@ -229,6 +229,20 @@ return promisetwo;
 firstfun().then(secondfun)....
 </script>
 
+-------------------------------------------------------------------------
+_______________Javascript Object Create diff Ways_______________________
+
+1. By using new keyword;
+var obj = new Object();
+
+2. By using object.create
+var obj = object.create(null);
+
+3. by using {}
+var obj = {id : 1, name : 'san'}
+
+4. by using this keyword.
+
 
 
 
