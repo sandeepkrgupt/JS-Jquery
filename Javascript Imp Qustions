@@ -71,3 +71,81 @@ console.log('am using serInterval');
 },1000);
 
 -------------------------------------------------------------
+________________This and NaN______________________________
+NaN is a reserved word that shows the number is not a valid number like 5/'five'
+This is the object that owns the javascript code.
+
+--------------------------------------------------------------
+_______________________Closure_______________________________
+Global variables can make local using Closure
+Closures are inner function that has access to outer function variables.
+<script>
+Var mycounter = function(){
+alert('this is outer fun');
+};
+Function myFun(){
+document.getElementById(“demo”).innerHTML = mycounter();
+}
+</script>
+
+
+-----------------------------------------------------------------------
+________________________Javascript DOM________________________________
+DOM is a W3C standered. DOM provides standerd to access HTML documents.
+Through DOM we can do following -
+i. Change HTML elements and attributes
+ii. Remove elements 
+iii. add new elements and attributes
+iv. Take action on html events.
+DOM methods for finding html elements -
+getElementById
+getElementByClassName
+getElementByTagName
+
+---------------------------------------------------------------------------
+_____________Javascript CSS Methods_______________________________________
+setAttribute - document.getElementById(‘demo’).setAttribute(‘color’,’red’);
+style.property_name - document.getElementById(‘demo’).style.color = ’red’;
+
+-----------------------------------------------------------------------------
+___________Handeling HTML elements using Javascript____________________________
+1.document.createElement(element) - Create an HTML element
+<button onclick="myFunction()">Try it</button>
+<script>
+function myFunction() {
+    var btn = document.createElement("button");
+    document.body.appendChild(btn);
+}
+</script>
+2.document.removeChild(element) - Remove an HTML element
+
+3.document.appendChild(element) - Add an HTML element
+<button onclick="addele()">add element</button>
+<ul id="lists">
+<li>Tea</li>
+</ul>
+<script>
+function addele(){
+var a = document.createElement("LI");
+var b = document.createTextNode("Coffee");
+a.appendChild(b);
+document.getElementById("lists").appendChild(a);
+}
+</script>
+
+document.replaceChild(element) - Replace an HTML element
+
+document.write(text) - Write into the HTML output stream
+
+--------------------------------------------------------------
+_________________________addEventListener____________________
+addEventListener add an event listener to HTML elements. We can add multiple event listners.
+<div id="demo"></div>
+<script>
+document.getElementById("demo").addEventListner('click',helloworld);
+helloworld(){
+alert("hello all world");
+}
+</script>
+
+
