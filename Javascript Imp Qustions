@@ -335,7 +335,7 @@ But when x = "san" y = "john"
 output - NaN , 4 , san17
 
 ______________________________Json related______________________________________
-json.parse() - Converting from Json string to Json object 
+json.parse() - Converting Json string into Json object 
 var obj = '{ id : 1,name : "rohit", class : 10 }' // this is string type object inside ' '
 var cvt = json.parse(obj);
 
