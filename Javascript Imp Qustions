@@ -1,4 +1,63 @@
+1. Data Types in Javascript ?
 
+Ans - 
+1. Number
+2. String
+3. Boolean
+4. Null
+5. undefined
+
+----------------------------------------------------
+2. Javascript scring methods
+
+Ans - 
+length - getting length of string.
+indexOf() - to get index of sub string inside any string.
+lastIndexOf() - to get positon of last string.
+
+----------------------------------------------------------
+3. Extracting string part ?
+
+Ans - There are three methods -
+1. slice(start,end); // If the parameter or number is negative it will count from the end.
+2. substr(start,length); // same as slice but cannot take negative values.
+3. substring(start,end);
+
+----------------------------------------------------------
+4. Replacing new string to existing string ?
+
+Ans - 
+replace("existing string","new string");
+
+-----------------------------------------------------------
+__________________________ARRAY_________________________________
+
+5. Javascript Array ?
+Array is a special variable that can store more than one value at a time like var x = ["a","b","c"]
+------------------------------------------------------------
+6. getting number of item in array ?
+var arr =  ["a","b","c"];
+arr.length();
+---------------------------------------------------------
+7. sorting item in array 
+var arr = ["d","a","b","c"];
+arr.sort();
+----------------------------------------------------------------
+8. deleting first element of array
+shift() delete the first element of an array and send all other elements in lower index.
+--------------------------------------------------------------
+9. adding new element at beginning 
+unshift() adds new element at the beginning of an array.
+-----------------------------------------------------------------
+10. adding new elements at specific position in array
+var arr = ["d","a","b","c"];
+arr.splice(2,0,"ee","ff"); // start , length
+output ["d","a","ee","ff","b","c"];
+------------------------------------------------------------
+11. removing existing from specific position in array
+var arr = ["d","a","b","c"];
+arr.splice(1,2); // start , length
+output ["d","a"];
 Differene between setTimeout and setInterval ?
 
 Ans - setTimeout execute the callback function after specific amount of time but setInterval executes function after regular interval.
@@ -9,3 +68,5 @@ console.log('i am using settimeout');
 setInterval(function(){
 console.log('am using serInterval');
 },1000);
+
+-------------------------------------------------------------
