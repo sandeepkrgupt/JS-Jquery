@@ -287,6 +287,27 @@ function qselect(){
          document.querySelector("p").style.background = "black";
 }
 </script>
+
+______________________________Javascript eval function_________________________
+The eval() function evaluates or executes an argument.
+If the argument is an expression, eval() evaluates the expression. 
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = "10"; or 10   
+    var y = "20"; or 20
+    var a = eval("x * y") + "<br>";
+    var b = eval("2 + 2") + "<br>";
+    var c = eval("x + 17") + "<br>";
+    var res = a + b + c;
+    document.getElementById("demo").innerHTML = res;
+}
+</script>
+output - 200 , 4 , 1017
+But when x = "san" y = "john" 
+output - NaN , 4 , san17
+
 ______________________________Json related______________________________________
 json.parse() - Converting from Json string to Json object 
 var obj = '{ id : 1,name : "rohit", class : 10 }' // this is string type object inside ' '
