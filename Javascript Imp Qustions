@@ -19,11 +19,24 @@ var x;
 </script>
 output - 0 : "hello india"
          1 : "hello usa"
+__________________________________________________________
 WHEN WE DECLARE VARIABLES TO THE TOP IS CALLED HOISTING.
 Like -
 var x;
 x = ["hello india","hello usa"];
 ----------------------------------------------------------
+___________________USE STRICT FOR ERRORS_________________
+<button onclick="cc()">cc</button>
+<script>
+"use strict";
+function cc(){
+x = 3.14;  
+console.log(x);
+}
+</script>
+output - Uncaught ReferenceError: x is not defined
+
+-------------------------------------------------------------
 1. Data Types in Javascript ?
 
 Ans - 
