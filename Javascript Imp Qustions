@@ -1,4 +1,27 @@
 VVI NOTE - we can use variable before it has been declared.
+
+____________________________________________________________________
+           DIFF B/W SYNCHRONOUS AND ASYNCHRONOUS PROGRAMMING
+  
+  Synchronous Ways - it waits each operation to complete then after it executes the next operation.
+  e.g -
+  var db = database.query("Select * from employee");
+  console.log("Query Finished");
+  console.log("Next Line");
+  output - 
+  Query Finished
+  Next Line
+  Asynchronous Way - It Never waits for each operation to complete, rather it execute all operations in first go. 
+  The result of each operation will be handled once the result will be available for your query.
+  e.g -
+  database.query("Select * from employee", function(result){
+  console.log("query finished");
+  });
+  console.log("Next Line");
+  output -
+  Next Line
+  Query Finished
+ -------------------------------------------------------------------
 <p id="demo"></p>
 <button onclick="clc()">cc</button>
 <script>
