@@ -230,7 +230,7 @@ firstfun().then(secondfun)....
 </script>
 
 -------------------------------------------------------------------------
-_______________Javascript Object Create diff Ways_______________________
+_______________Javascript Object Creation in diff Ways_______________________
 
 1. By using new keyword;
 var obj = new Object();
