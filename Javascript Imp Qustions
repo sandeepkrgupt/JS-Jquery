@@ -60,8 +60,8 @@ lastIndexOf() - to get positon of last string.
 
 Ans - There are three methods -
 1. slice(start,end); // If the parameter or number is negative it will count from the end.
-2. substr(start,length); // same as slice but cannot take negative values.
-3. substring(start,end);
+2. substr(start,length); 
+3. substring(start,end); // same as slice but cannot take negative values.
 
 ----------------------------------------------------------
 4. Replacing new string to existing string ?
