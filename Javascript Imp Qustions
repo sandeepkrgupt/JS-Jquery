@@ -1,14 +1,24 @@
 VVI NOTE - we can use variable before it has been declared.
-x = 5;
-colsole.log(x);
+<p id="demo"></p>
+<button onclick="clc()">cc</button>
+<script>
+function clc(){
+x = ["hello india","hello usa"];
+console.log(x);
+}
+</script>
+output - 0 : "hello india"
+         1 : "hello usa"
+or
+<script>
+function clc(){
+x = ["hello india","hello usa"];
+console.log(x);
 var x;
-
-output - 5;
-and
-x = 5;
-colsole.log(x);
-
-output - 5; (not undefined)
+}
+</script>
+output - 0 : "hello india"
+         1 : "hello usa"
 ----------------------------------------------------------
 1. Data Types in Javascript ?
 
