@@ -243,6 +243,16 @@ var obj = {id : 1, name : 'san'}
 
 4. by using this keyword.
 
+____________________redirect to another/logout page if no user activity_________
+<script>
+var idlestate;
+idlestate = setTimeout("location.href = 'location to redirect';",10000) // 10 min
+window.onmousemove = function(){
+clearTimeout(idlestate);
+idlestate = setTimeout("location.href = 'location to redirect';",10000);
+};
+</script>
+
 
 
 
