@@ -172,7 +172,7 @@ addEventListener add an event listener to HTML elements. We can add multiple eve
 <div id="demo"></div>
 <script>
 document.getElementById("demo").addEventListener('click',helloworld);
-helloworld(){
+function helloworld(){
 alert("hello all world");
 }
 </script>
