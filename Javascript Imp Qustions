@@ -203,5 +203,32 @@ console.log(x);
 output - san ( not undefined. )
 Hoisting is javascript default behavior of moving all declarations to the top of current script or function.
 
+----------------------------------------------------------------------------
+___________________Javascript Promises______________________________________
+promises are used to call funtions one after another in a sequence if the first function completed successfully.
+<script>
+function firstfun(){
+var promiseone = new Promise(function(resolve,reject){
+setTimeout(function(){
+console.log('fst method');
+resolve({'data' : 'john'});
+},2000)
+});
+return promiseone;
+}
+function secondfun(){
+var promisetwo = new Promise(function(resolve,reject){
+setTimeout(function(){
+console.log('second function');
+resolve({'data': 'marine'});
+},2000)
+})
+return promisetwo;
+}
+// calling in sequence
+firstfun().then(secondfun)....
+</script>
+
+
 
 
