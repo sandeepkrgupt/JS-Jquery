@@ -210,7 +210,7 @@ promises are used to call funtions one after another in a sequence if the first 
 function firstfun(){
 var promiseone = new Promise(function(resolve,reject){
 setTimeout(function(){
-console.log('fst method');
+console.log('fst function');
 resolve({'data' : 'john'});
 },2000)
 });
