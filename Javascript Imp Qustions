@@ -1,3 +1,15 @@
+VVI NOTE - we can use variable before it has been declared.
+x = 5;
+colsole.log(x);
+var x;
+
+output - 5;
+and
+x = 5;
+colsole.log(x);
+
+output - 5; (not undefined)
+----------------------------------------------------------
 1. Data Types in Javascript ?
 
 Ans - 
