@@ -1,3 +1,4 @@
+
 ____________________________Javascript Ajax________________________
 -------------------------------------------------------------------
 Ajax is a tequnic to load content from server without postback or page refresh.
@@ -33,4 +34,43 @@ function showcontent(){
 document.getElementById("demo").innerHTML = this.responseText;
 }
 </script>
+
+______________________XMLHttp Request Methods_______________________
+--------------------------------------------------------------------
+new XMLHttpRequest = XMLHttp request object that sends request to the web server.
+abort() = cancel current request.
+getResponseHeader() = return specific header info.
+open(method,url,assr,username,password) // assr , username, password - optional
+send() - send request to server.
+setRequestHeader() = add level value pair to header to be send.
+
+______________________XMLHttp Request Properties_____________________
+---------------------------------------------------------------------
+onreadystatechange = define function to be called when ready state change.
+readyState = hold the status of XMLHttp Request.
+0 = request is not initialized.
+1 = server connection established.
+2 = request received.
+3 = request processing.
+4 = request is finished and response is ready.
+responseText = return response data as a string.
+Status - 200(success), 403(forbidden),404(not found).
+statusText - return status text. 
+
+___________________________XMLHttp Response Header____________________
+----------------------------------------------------------------------
+http is a protocall. request header is a concept of http protocall. when an XMLHttpRequest happens text
+is exchanged between client and server. Request Headers are the part of the text that client sends to server.
+To Set Header = Content-type
+To Set Value = x-www-form-urlencoded
+xhhtp.setRequestHeader("Content-type"," application/x-www-form-urlencoded");
+
+_______________________Using Assynchronous as True__________________________
+----------------------------------------------------------------------------
+Sending assynchronous means the javascript does not have to wait for server response.
+When assn is true function executes when response is ready.
+
+**************************************END*************************************
+
+
 
