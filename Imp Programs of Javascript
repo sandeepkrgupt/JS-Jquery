@@ -1,1 +1,67 @@
+____________________Adding Rows and Input Fields Dynamically__________________
+------------------------------------------------------------------------------
+<body>
+<button onclick = "addNewRow('empTable')">Add New Row </button>
+<table id="empTable">
+<tr>
+  <th>ID</th><th>Select Country</th><th>column 3</th>
+</tr>
+<script>
+ function addRow(tableID) {
 
+     var table = document.getElementById(tableID);
+
+     var rowCount = table.rows.length;
+     var row = table.insertRow(rowCount);//The insertRow() creates an empty <tr> element and adds it to a table.
+     
+// checkbox
+     var col1 = row.insertCell(0);
+     var element1 = document.createElement("input");
+     element1.type = "checkbox";
+     element1.name = "chkbox[]";
+     col1.appendChild(element1);
+     
+// selectbox
+     var col3 = row.insertCell(2);
+     var element3 = document.createElement('select');
+     element4 = document.createElement('option');
+     element4.value = "option[]";
+     element4.innerHTML = "india";
+     element3.appendChild(element4);
+     col3.appendChild(element3);
+     
+// simple column
+     var col4 = row.insertCell(3);
+     col4.innerHTML = rowCount;
+
+ }
+</script>
+
+-----------------------------------------------------------------------------------
+___________________________________ Selct All Rows From one Checkbox_______________
+<body>
+<table>
+<tr>
+<th><input type="checkbox" onchange="selectDeselectAll(this)">ID</th><th>Select Country</th><th>column 3</th>
+</tr>
+</table>
+<script>
+function selectDeselectAll(ele){
+  var checkboxss = document.getElementByTagName('input');
+  if(ele.checked == true){
+    for(var i =0 ; i<checkboxss.length; i++){
+      if(ckeckboxss[i].type == 'checkbox'){
+        checkboxss[i].checked = true;
+      }
+    }
+  }
+  else{
+   for(var i = 0; i<checkboxss.length; i++){
+      if(checkboxss[i].type == 'checkbox'){
+        checkboxss.checked = false;
+      }
+   }
+  }
+}
+</script>
+</body>
