@@ -1,0 +1,98 @@
+<html>
+<head>
+<!--Add Dynamic-->
+<script>
+ function addRow(tableID) {
+
+     var table = document.getElementById(tableID);
+
+     var rowCount = table.rows.length;
+     var row = table.insertRow(rowCount);//The insertRow() creates an empty <tr> element and adds it to a table.
+
+     var col1 = row.insertCell(0);
+     var element1 = document.createElement("input");
+     element1.type = "checkbox";
+     element1.name = "chkbox[]";
+     col1.appendChild(element1);
+
+     var col2 = row.insertCell(1);
+     var element2 = document.createElement('input');
+     element2.type = "text";
+     element2.name ="text[]";
+     element2.value ="Fill it";
+     col2.appendChild(element2);
+
+
+     var col3 = row.insertCell(2);
+     var element3 = document.createElement('select');
+     element4 = document.createElement('option');
+     element4.value = "option[]";
+     element4.innerHTML = "india";
+     element3.appendChild(element4);
+     col3.appendChild(element3);
+
+     var col4 = row.insertCell(3);
+     col4.innerHTML = rowCount;
+
+ }
+</script>
+<!--Check All-->
+<script type="text/javascript">
+	function checkAll(ele) {
+     var checkboxes = document.getElementsByTagName('input');
+     if (ele.checked) {
+         for (var i = 0; i < checkboxes.length; i++) {
+             if (checkboxes[i].type == 'checkbox') {
+                 checkboxes[i].checked = true;
+             }
+         }
+     } else {
+         for (var i = 0; i < checkboxes.length; i++) {
+             console.log(i)
+             if (checkboxes[i].type == 'checkbox') {
+                 checkboxes[i].checked = false;
+             }
+         }
+     }
+ }
+</script>
+</head>
+<body>
+<input type="button" value="Add Row" onclick="addRow('dataTable')" />
+<input type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
+<table id="dataTable" border="1">
+    <tr>
+        <th>
+            <INPUT type="checkbox" onchange="checkAll(this)" name="chk[]" />ID
+        </th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Description</th>
+    </tr>
+</table>
+<input type="radio" name="" checked="false">dfd
+
+<!--Delect Selected-->
+<script type="text/javascript">
+ function deleteRow(tableID) {
+     try {
+         var table = document.getElementById(tableID);
+         var rowCount = table.rows.length;
+
+         for (var i = 1; i < rowCount; i++) {
+             var row = table.rows[i];
+             var chkbox = row.cells[0].childNodes[0];
+             if (null != chkbox && true == chkbox.checked) {
+                 table.deleteRow(i);
+                 rowCount--;
+                 i--;
+             }
+         }
+     } catch (e) {
+         alert(e);
+     }
+ }
+</script>
+
+</body>
+</html>
