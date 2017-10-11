@@ -63,12 +63,12 @@ http is a protocall. request header is a concept of http protocall. when an XMLH
 is exchanged between client and server. Request Headers are the part of the text that client sends to server.
 To Set Header = Content-type
 To Set Value = x-www-form-urlencoded
-xhhtp.setRequestHeader("Content-type"," application/x-www-form-urlencoded");
+xhttp.setRequestHeader("Content-type"," application/x-www-form-urlencoded");
 
 _______________________Using Assynchronous as True__________________________
 ----------------------------------------------------------------------------
 Sending assynchronous means the javascript does not have to wait for server response.
-When assn is true function executes when response is ready.
+When assychronous is true function executes when response is ready.
 
 **************************************END*************************************
 
