@@ -1,1 +1,36 @@
+____________________________Javascript Ajax________________________
+-------------------------------------------------------------------
+Ajax is a tequnic to load content from server without postback or page refresh.
+
+<p id="demo"></p>
+<button onclick="loadAjax()"></button>
+<script>
+function loadAjax(){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function(){
+if(this.readyState == 4 && this.status == 200){
+document.getElementById("demo").innerHTML = this.responseText;
+}
+};
+xhttp.open("get","url",true);
+xhttp.send();
+}
+</script>
+Second Way - ( calling a function if status - 200 )
+
+<script>
+function loadAjax(){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function(){
+if(this.readyState == 4 && this.status == 200){
+showcontent(this);
+}
+};
+xhttp.open("get","url",true);
+xhttp.send();
+}
+function showcontent(){
+document.getElementById("demo").innerHTML = this.responseText;
+}
+</script>
 
