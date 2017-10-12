@@ -2,9 +2,10 @@ ____________________Adding Rows and Input Fields Dynamically__________________
 ------------------------------------------------------------------------------
 <body>
 <button onclick = "addNewRow('empTable')">Add New Row </button>
+<button onclick = "deleteRow('empTable')">delete Row </button>
 <table id="empTable">
 <tr>
-  <th>ID</th><th>Select Country</th><th>column 3</th>
+  <th><input type="checkbox" onchange="selectDeselectAll(this)">ID</th><th>Select Country</th><th>column 3</th>
 </tr>
 <script>
  function addRow(tableID) {
@@ -39,12 +40,6 @@ ____________________Adding Rows and Input Fields Dynamically__________________
 
 -----------------------------------------------------------------------------------
 ___________________________________ Selct All Rows From one Checkbox_______________
-<body>
-<table>
-<tr>
-<th><input type="checkbox" onchange="selectDeselectAll(this)">ID</th><th>Select Country</th><th>column 3</th>
-</tr>
-</table>
 <script>
 function selectDeselectAll(ele){
   var checkboxss = document.getElementByTagName('input');
@@ -63,5 +58,27 @@ function selectDeselectAll(ele){
    }
   }
 }
+</script>
+
+<!--Delect Selected-->
+<script type="text/javascript">
+ function deleteRow(tableID) {
+     try {
+         var table = document.getElementById(tableID);
+         var rowCount = table.rows.length;
+
+         for (var i = 1; i < rowCount; i++) {
+             var row = table.rows[i];
+             var chkbox = row.cells[0].childNodes[0];
+             if (null != chkbox && true == chkbox.checked) {
+                 table.deleteRow(i);
+                 rowCount--;
+                 i--;
+             }
+         }
+     } catch (e) {
+         alert(e);
+     }
+ }
 </script>
 </body>
