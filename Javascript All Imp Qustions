@@ -123,6 +123,13 @@ var arr = ["d","a","b","c"];
 arr.splice(1,2); // start , length
 output ["d","a"];
 
+_____________________Javascript Objects___________________
+var obj = {"name":"san",id:1,"class":"6th"}
+for (i in obj){
+alert(obj[i]); // san , 1 , 6th
+alert(obj[i].name);  // undefined
+}
+
 -------------------------------------------------------------
 ________________This and NaN______________________________
 NaN is a reserved word that shows the number is not a valid number like 5/'five'
