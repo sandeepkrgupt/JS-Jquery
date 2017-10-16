@@ -1,1 +1,21 @@
+Adding textbox value dynamically.
 
+<form id="myform" action="whatever.php">
+    <lable name="text">enter text</label>
+    <input id="in" type="text" />
+    <input type="submit" />
+</form>
+<div class="results">
+    <ul class="list">
+    </ul>
+</div>
+<script>
+(function($){
+    $('#myform').submit(function(e){
+        var val = $(this).find('#in').val();
+        $('ul.list').append('<li>' + val + '</li>');
+        e.preventDefault();
+    });
+})(jQuery);
+</script>
+-----------------------------------------------------------------
