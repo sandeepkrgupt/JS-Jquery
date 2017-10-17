@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+var data = {"name":"John Doe"};
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({
+        type :"GET",
+        url: "demo_ajax_load.txt", 
+        async: false, 
+        contentType:"text/plain",
+        data : JSON.stringify(data),
+       //dataType:'application/json',
+        timeout : 3000,
+        success: function(result){
+            $("div").html(result);
+        },error: function(xhr){
+            alert("An error occured: " + xhr.status + " " + xhr.statusText);
+        }
+        });
+    });
+});
+</script>
+</head>
+<body>
+  <div><h2>Let AJAX change this text</h2></div>
+  <button>Change Content</button>
+</body>
+</html>
+
+
 
