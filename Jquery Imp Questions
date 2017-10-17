@@ -13,9 +13,8 @@ window.location.protocol returns the web protocol used (http: or https:)
 Getting Browser , OS and User Details using javascript
 <!DOCTYPE html>
 <html>
-<head>
+<body>
 <div id="example"></div>
-
 <script type="text/javascript">
   txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>"; 
   txt+= "<p>Browser Name: " + navigator.appName + "</p>";
@@ -25,8 +24,5 @@ Getting Browser , OS and User Details using javascript
   txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
   document.getElementById("example").innerHTML=txt;
 </script>
-
-</head>
-<body>
 </body>
 </html>
