@@ -8,15 +8,15 @@ $(document).ready(function(){
     $("button").click(function(){
         $.ajax({
         type :"GET",
-        url: "demo_ajax_load.txt", 
-        async: false, 
-        contentType:"text/plain",
-        data : JSON.stringify(data),
-       //dataType:'application/json',
+        url: "demo_ajax_load.txt", // Specifies the URL to send the request to. Default is the current page
+        async: false, // Default is true
+        contentType:"text/plain", //The content type used when sending data to the server. Default is: "application/x-www-form-urlencoded
+        data : JSON.stringify(data), //Specifies data to be sent to the server
+       //dataType:'application/json', //The data type expected of the server response.
         timeout : 3000,
         success: function(result){
             $("div").html(result);
-        },error: function(xhr){
+        },error: function(xhr){  // xhr - A function used for creating the XMLHttpRequest object
             alert("An error occured: " + xhr.status + " " + xhr.statusText);
         }
         });
@@ -29,6 +29,9 @@ $(document).ready(function(){
   <button>Change Content</button>
 </body>
 </html>
+
+when we use dataType:'application/json' it will show parser error , because when we return data 
+that is not fully json, so parser fails to convert it and thus generate this error.
 
 
 
