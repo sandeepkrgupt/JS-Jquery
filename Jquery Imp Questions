@@ -26,3 +26,8 @@ Getting Browser , OS and User Details using javascript
 </script>
 </body>
 </html>
+--------------------------------------------------------------------
+Redirecting to another page using meta tag -
+<head>
+     <meta http-equiv="refresh" content="12;url=https://www.w3schools.com" />
+</head>
