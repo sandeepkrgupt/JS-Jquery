@@ -46,8 +46,8 @@ output - 0 : "hello india"
 __________________________________________________________
 WHEN WE DECLARE VARIABLES TO THE TOP IS CALLED HOISTING.
 Like -
-var x;
 x = ["hello india","hello usa"];
+var x;
 ----------------------------------------------------------
 ___________________USE STRICT FOR ERRORS_________________
 <button onclick="cc()">cc</button>
