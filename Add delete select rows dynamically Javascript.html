@@ -3,9 +3,7 @@
 <!--Add Dynamic-->
 <script>
  function addRow(tableID) {
-
      var table = document.getElementById(tableID);
-
      var rowCount = table.rows.length;
      var row = table.insertRow(rowCount);//The insertRow() creates an empty <tr> element and adds it to a table.
 
@@ -56,22 +54,6 @@
      }
  }
 </script>
-</head>
-<body>
-<input type="button" value="Add Row" onclick="addRow('dataTable')" />
-<input type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
-<table id="dataTable" border="1">
-    <tr>
-        <th>
-            <INPUT type="checkbox" onchange="checkAll(this)" name="chk[]" />ID
-        </th>
-        <th>Make</th>
-        <th>Model</th>
-        <th>Description</th>
-    </tr>
-</table>
-<input type="radio" name="" checked="false">dfd
-
 <!--Delect Selected-->
 <script type="text/javascript">
  function deleteRow(tableID) {
@@ -94,5 +76,20 @@
  }
 </script>
 
+</head>
+<body>
+<input type="button" value="Add Row" onclick="addRow('dataTable')" />
+<input type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
+<table id="dataTable" border="1">
+    <tr>
+        <th>
+            <INPUT type="checkbox" onchange="checkAll(this)" name="chk[]" />ID
+        </th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Description</th>
+    </tr>
+</table>
+<input type="radio" name="" checked="false">dfd
 </body>
 </html>
