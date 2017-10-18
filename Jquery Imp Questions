@@ -31,3 +31,13 @@ Redirecting to another page using meta tag -
 <head>
      <meta http-equiv="refresh" content="12;url=https://www.w3schools.com" />
 </head>
+----------------------------------------------------------------------
+Jquery function to get item in array
+<script>
+var arr = [ 4, "Pete", 8, "John" ];
+var $spans = $( "span" );
+$spans.eq( 0 ).text( jQuery.inArray( "John", arr ) );
+$spans.eq( 1 ).text( jQuery.inArray( 4, arr ) );
+$spans.eq( 2 ).text( jQuery.inArray( "Karl", arr ) );
+$spans.eq( 3 ).text( jQuery.inArray( "Pete", arr, 2 ) );
+</script>
