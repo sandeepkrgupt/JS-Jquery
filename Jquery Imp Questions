@@ -132,5 +132,45 @@ $(document).ready(function(){
     });
 });
 </script>
+----------------------------------------------------------------------
+Which jQuery method is used to perform an asynchronous HTTP request ?
+Ans - ajax()
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({
+        url: "demo_test.txt", 
+        success: function(result){
+            $("#div1").html(result);
+        }
+        });
+    });
+});
+</script>
 
+---------------------------------------------------------------------
+Which jQuery method is used to remove selected elements ?
+Ans - detach()
+The detach() method removes the selected elements, including all text and child nodes. However, it keeps data and events.
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").detach();
+  });
+});
+</script>
+It will delete all paragraph inside your page/ html body.
+Note - detach() is like remove(), but keeps the stored data and events associated with the matched elements.
+----------------------------------------------------------------------
+Jquery remove element which according to matching content
+
+<script>
+$( "button" ).click(function() {
+  $( "p" ).remove( ":contains('Hello')" ); //  or $( "p" ).remove( ":contains('hello')" );
+});
+</script>
+<p class="greeting">Hello</p>
+how are
+<p>you?</p>
+// output - it will delete only first paragraph.
 
