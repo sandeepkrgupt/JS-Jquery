@@ -53,3 +53,52 @@ $(document).ready(function(){
     });
 });
 </script>
+-------------------------------------------------------------------------
+Making Duplicate of HTML Elements using Jquery 
+clone() - Jquery clone is used to make clone/duplicate of selected elements including child nodes, text and attributes
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").clone().appendTo("body");
+    });
+});
+</script>
+------------------------------------------------------------------------
+Jquery closest() -
+The closest() method returns the first ancestor, first nearest parent element of the selected element.
+An ancestor is a parent, grandparent, great-grandparent, and so on.
+<script>
+$(document).ready(function(){
+    $("span").closest("ul").css({"color": "red", "border": "2px solid red"});
+});
+</script>
+-------------------------------------------------------------------------
+Jquery find()
+
+The find() method returns descendant elements of the selected element.
+A descendant is a child, grandchild, great-grandchild, and so on.
+
+<script>
+$(document).ready(function(){
+    $("ul").find("li span,b").css({"color": "red", "border": "2px solid red"});
+});
+</script>
+it will apply css on all span inside li of ul and all b element inside ul. but not on span inside ul.
+-------------------------------------------------------------------------
+The each() method specifies a function to run for each matched element.
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("li").each(function(){
+            alert($(this).text())
+            //return false; to stop the loop
+        });
+    });
+});
+</script>
+<li>Tea</li>
+<li>Coffee</li>
+<li>Milk</li>
+// output - one by one it will alert  Tea, Coffee and Milk.
+
