@@ -101,4 +101,36 @@ $(document).ready(function(){
 <li>Coffee</li>
 <li>Milk</li>
 // output - one by one it will alert  Tea, Coffee and Milk.
+-------------------------------------------------------------------------
+append()	Inserts content at the end of selected elements
+appendTo()	Inserts HTML elements at the end of selected elements
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("p").append(" <b>Appended text</b>.");
+        $("<b>Appended To div text</b>.").appendTo("div")
+    });
+});
+</script>
+// both will add element at the end.
+--------------------------------------------------------------------------
+Jquery attr() - applying html attribute using Jquery
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("img").attr({"width":"500px", "height":"420px"});
+    });
+});
+</script>
+------------------------------------------------------------------------
+inserting content before selected element 
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("<span>Hello world!</span>").insertBefore("p");
+    });
+});
+</script>
+
 
