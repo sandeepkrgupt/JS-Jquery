@@ -41,3 +41,15 @@ $spans.eq( 1 ).text( jQuery.inArray( 4, arr ) );
 $spans.eq( 2 ).text( jQuery.inArray( "Karl", arr ) );
 $spans.eq( 3 ).text( jQuery.inArray( "Pete", arr, 2 ) );
 </script>
+-----------------------------------------------------------------------
+Jquery Css Method
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css({"background-color": "#cccccc","border":"1px solid green"});
+    });
+    $("input").blur(function(){
+        $(this).css({"background-color":"#888","border":"1px solid red"});
+    });
+});
+</script>
