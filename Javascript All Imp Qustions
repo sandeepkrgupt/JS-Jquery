@@ -1,5 +1,32 @@
 VVI NOTE - 
 
+Reading url From Browser ?
+window.location.href returns the href (URL) of the current page
+window.location.hostname returns the domain name of the web host
+window.location.pathname returns the path and filename of the current page
+window.location.protocol returns the web protocol used (http: or https:)
+
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML =  window.location.href;
+</script>
+
+-----------------------------------------------------------------------------
+Getting Browser , OS and User Details using javascript
+<!DOCTYPE html>
+<html>
+<body>
+<div id="example"></div>
+<script type="text/javascript">
+  txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>"; 
+  txt+= "<p>Browser Name: " + navigator.appName + "</p>";
+  txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
+  txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+  txt+= "<p>Platform: " + navigator.platform + "</p>";
+  txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+  document.getElementById("example").innerHTML=txt;
+</script>
+</body>
 ____________________________________________________________________
            DIFF B/W SYNCHRONOUS AND ASYNCHRONOUS PROGRAMMING
   
