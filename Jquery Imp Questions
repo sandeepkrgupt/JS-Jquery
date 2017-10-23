@@ -1,3 +1,20 @@
+Jquery Method Chaining ?
+there is a technique called chaining, that allows us to run multiple jQuery commands, 
+one after the other, on the same element(s).
+e.g -  $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+
+Event Delegation in Jquery ?
+In Event Delegation we can attach one or more event handlers for specified elements that are children of selected elements, 
+and specifies a function to run when the events occur.
+<script>
+$(document).ready(function(){
+    $("div").delegate("p", "click",function(){
+        $("p").css("background-color", "pink");
+    });
+});
+</script>
+The delegate() method was deprecated in version 3.0. Use the on() method instead.
+----------------------------------------------------------------------
 Reading url From Browser ?
 window.location.href returns the href (URL) of the current page
 window.location.hostname returns the domain name of the web host
