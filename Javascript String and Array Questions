@@ -25,7 +25,17 @@ replace("existing string","new string");
 __________________________ARRAY_________________________________
 
 5. Javascript Array ?
-Array is a special variable that can store more than one value at a time like var x = ["a","b","c"]
+Array is a special variable that can store more than one value, ike var x = ["a","b","c"]
+
+Associative Array -
+JavaScript not support the array as name indexes and its provide only number indexes 
+but provide this feature using the associative array.
+var empDetailType = new Array();
+empDetailType["empName"] = "ANil";
+empDetailType["empAge"] = 30;
+empDetailType["empDOB"] = "10/03/1984";
+console.log("Find the emp age type :" + empDetailType["empAge"]);
+// output - Find the emp age type : 30
 ------------------------------------------------------------
 6. getting number of item in array ?
 var arr =  ["a","b","c"];
