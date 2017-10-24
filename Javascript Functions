@@ -124,3 +124,23 @@ document.getElementById("demo").innerHTML = myCount();
 }
 </script>
 this will start from 2.
+
+-------------------------------------------------------------------
+Some functions and outputs -
+function demoTest() {
+    x = 15;
+};
+console.log(x); //output is 15
+
+The example for local scope variable -
+function getDetail() {
+    var gblVar = "Anil Singh";
+    console.log(gblVar);   // Anil Singh
+}
+
+And other example for local -
+function demoText() {
+        var x = 15;
+};
+console.log(x); //undefined
+
