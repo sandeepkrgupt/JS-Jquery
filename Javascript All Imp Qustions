@@ -1,5 +1,25 @@
 VVI NOTE - 
 
+What Is an Object?
+The object is a collection of properties and each property associated with the name-value pairs. 
+The object can contain any data types (numbers, arrays, object etc.)
+-----------------------------------------------------------------------------
+constructor -
+ constructor is a function used to initialize new object. 
+
+Creating Javascript Objects -
+1. using literals
+var obj = {}
+
+2. using constructor -
+var obj = new Object();
+Obj.empId=”001”;
+Obj.empCode=”X0091”;
+
+Obj.empAddressDetail = function(){
+    console.log(“Hi, I Anil”);
+};
+-----------------------------------------------------------------------------
 Reading url From Browser ?
 window.location.href returns the href (URL) of the current page
 window.location.hostname returns the domain name of the web host
