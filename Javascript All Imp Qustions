@@ -32,6 +32,7 @@ var x = 123;
 x.toString() // output - 123; (String type)
 var x = 'guptasandeep188';
 parseInt(x); // output - 188 (Number type)
+Number(x)  // output - NaN (if x = "188" output - 188)
 ----------------------------------------------------------------------------
 What Is an Object?
 The object is a collection of properties and each property associated with the name-value pairs. 
