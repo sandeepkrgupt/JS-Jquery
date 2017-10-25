@@ -4,7 +4,7 @@ Every JavaScript object has a prototype. The prototype is also an object.
 All JavaScript objects inherit their properties and methods from their prototype.
 <p id="demo"></p>
 <script>
-function Person(first, last, age, eye) {
+function Person(first, last, age, eye) {  // this is a prototype, Here Person is object constructor function.
     this.firstName = first;
     this.lastName = last;
     this.age = age;
