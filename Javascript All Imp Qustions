@@ -1,4 +1,28 @@
 VVI NOTE - 
+Prototype in Javascript - 
+Every JavaScript object has a prototype. The prototype is also an object.
+All JavaScript objects inherit their properties and methods from their prototype.
+<p id="demo"></p>
+<script>
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    this.name = function() { //Adding a new method to an existing object.
+        return this.firstName + " " + this.lastName 
+    };
+}
+Person.prototype.Address = "Mumbai";  //using prototype keyword
+
+var myFather = new Person("John", "Doe", 50, "blue"); // new keyword creates new objects from the same prototype
+myFather.nationality = "indian"; // Adding Properties to Objects
+
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.name() + " " + myFather.nationality + " " +myFather.Address;  
+</script>
+// output - My father is John Doe indian Mumbai
+-------------------------------------------------------------------------------
 Type Casting in Javascript -
 Type casting allows you to access a specific value as if it were of a different type. 
 Means Type casting is a process/processor to convert values to diff data types. like -
