@@ -242,7 +242,17 @@ Function myFun(){
 document.getElementById(“demo”).innerHTML = mycounter();
 }
 </script>
-
+or
+<script>
+function outer(j){
+    var j = "am outer fun";
+    function inner(i,j){
+        var i ="am inner fun";
+        console.log(i + j);
+    }
+}
+document.getElementById(“demo”).innerHTML = outer();
+</script>
 
 -----------------------------------------------------------------------
 ________________________Javascript DOM________________________________
