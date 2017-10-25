@@ -1,5 +1,15 @@
 VVI NOTE - 
-
+Type Casting in Javascript -
+Type casting allows you to access a specific value as if it were of a different type. 
+Means Type casting is a process/processor to convert values to diff data types. like -
+Number() converts values to a - Number Data Type, 
+String() converts to a String, 
+Boolean() converts to a Boolean.
+var x = 123;
+x.toString() // output - 123; (String type)
+var x = 'guptasandeep188';
+parseInt(x); // output - 188 (Number type)
+----------------------------------------------------------------------------
 What Is an Object?
 The object is a collection of properties and each property associated with the name-value pairs. 
 The object can contain any data types (numbers, arrays, object etc.)
@@ -110,12 +120,25 @@ output - Uncaught ReferenceError: x is not defined
 -------------------------------------------------------------
 1. Data Types in Javascript ?
 
-Ans - 
-1. Number
-2. String
-3. Boolean
-4. Null
-5. undefined
+Ans - There are two types of data Type in Javascript
+1. Premitive -
+Number
+String
+Boolean
+Null
+undefined
+
+2. Non Premitive -
+Object
+Array
+Regular Expression.
+or we can say there are 6 types of Data Types in JS.
+Object, Number, String, Boolean, Null, and Undefined. 
+
+Objects include - arrays, functions, and ordinary objects. 
+Numbers may be - integers or floating point or the special values NaN and Infinity . 
+Strings include the empty string, "".
+
 
 ----------------------------------------------------
 __________________SRING___________________________
