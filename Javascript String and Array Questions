@@ -22,6 +22,16 @@ Ans -
 replace("existing string","new string");
 
 -----------------------------------------------------------
+Search() -
+The search() method uses an expression to search for a match, and returns the position of the match.
+<script>
+function myFunction() {
+    var str = "Visit W3Schools!"; 
+    var n = str.search("W3Schools");  or str.search(/w3Schools/i); // Here '/w3Schools/i' is Regular Expression.
+    document.getElementById("demo").innerHTML = n;
+}
+</script>
+// output - 6 (position of string W3Schools).
 __________________________ARRAY_________________________________
 
 5. Javascript Array ?
