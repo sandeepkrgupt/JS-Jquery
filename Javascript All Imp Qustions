@@ -46,7 +46,7 @@ Creating Javascript Objects -
 var obj = {}
 
 2. using constructor -
-var obj = new Object();
+var obj = new Object_Name(); // like var obj = new Person(); function Person(){};
 Obj.empId=”001”;
 Obj.empCode=”X0091”;
 
