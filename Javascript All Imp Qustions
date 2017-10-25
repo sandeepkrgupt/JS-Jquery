@@ -26,7 +26,7 @@ document.getElementById("demo").innerHTML =
 Type Casting in Javascript -
 Type casting allows you to access a specific value as if it were of a different type. 
 Means Type casting is a process/processor to convert values to diff data types. like -
-Number() converts values to a - Number Data Type, 
+Number() converts values to a - Number Data Type, (if value is string it will return NaN) 
 String() converts to a String, 
 Boolean() converts to a Boolean.
 var x = 123;
