@@ -465,10 +465,19 @@ To return all the matches, use the querySelectorAll() method instead.
 
 <script>
 function qselect(){
-         document.querySelector("p").style.background = "black";
+         document.querySelector("p").style.background = "black"; // will apply on first para
 }
 </script>
+Query Selector using class -
+<h2 class="example">A heading with class="example"</h2>
+<p class="example">A paragraph with class="example".</p> 
+<button onclick="myFunction()">Try it</button>
 
+<script>
+function myFunction() {
+    document.querySelector(".example").style.backgroundColor = "red"; // Will apply on h2
+}
+</script>
 ______________________________Javascript eval function_________________________
 The eval() function evaluates or executes an argument.
 If the argument is an expression, eval() evaluates the expression. 
