@@ -329,16 +329,34 @@ __________________Very Very Importent_________________________________
 ___________________Javascript Hoisting________________________________
 
 In javascript we can use variable before it is declared.
-or
-In JavaScript, a variable can be declared after it has been used.
+
+Hoisting is javascript default behavior of moving all declarations to the top of current script or function.
+Note : - Creating a variable in JavaScript is called "declaring" a variable or variable declaration. Like var x; var Str;
+After the declaration, the variable has no value. (Technically it has the value of undefined)
+To assign a value to the variable, use the equal sign: x = 5; St = "hello world";
 like 
 <script>
-x = "san";
-console.log(x);
+    x = "san";
+    console.log(x);
 </script>
-output - san ( not undefined. )
-Hoisting is javascript default behavior of moving all declarations to the top of current script or function.
-
+output - san 
+===========================
+And When -
+<script>
+    "use strict"
+    x = "san";
+    console.log(x);
+    var x;
+</script>
+// output - san
+============================
+But When -
+<script>
+    "use strict"
+    x = "san";
+    console.log(x);
+</script>
+// output - x is not defined.
 ----------------------------------------------------------------------------
 ___________________Javascript Promises______________________________________
 promises are used to call funtions one after another in a sequence if the first function completed successfully.
