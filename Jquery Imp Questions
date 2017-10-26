@@ -1,3 +1,13 @@
+____________________________noconflict__________________________________________
+<script>
+$.noConflict();
+jQuery( document ).ready(function( $ ) {
+  // Code that uses jQuery's $ can follow here.
+});
+// Code that uses other library's $ can follow here.
+</script>
+-------------------------------------------------------------------------------
+
 Jquery Method Chaining ?
 there is a technique called chaining, that allows us to run multiple jQuery commands, 
 one after the other, on the same element(s).
