@@ -11,6 +11,12 @@ The important difference between constructors and methods -
 
 2. Constructors can't be called directly; they are called implicitly when the new keyword creates an object. 
    Methods can be called directly on an object that has already been created with new.
+   <script>
+   class myClass1{
+   ---------------
+   }
+   var classobj = new myClass1(); // constructor 
+   </script>
 ------------------------------------------------------------------------------
 Prototype in Javascript - 
 Every JavaScript object has a prototype. The prototype is also an object.
