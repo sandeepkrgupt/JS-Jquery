@@ -354,6 +354,10 @@ But When -
 ----------------------------------------------------------------------------
 ___________________Javascript Promises______________________________________
 promises are used to call funtions one after another in a sequence if the first function completed successfully.
+The Promise object returns the eventual completion/success or failure of assynchronous operation and its resulting value.
+Syntax - 
+new Promise( /* executor */ function(resolve, reject) { ... } );
+executor - A function that is passed with the arguments resolve and reject.
 <script>
 function firstfun(){
 var promiseone = new Promise(function(resolve,reject){
@@ -376,7 +380,10 @@ return promisetwo;
 // calling in sequence
 firstfun().then(secondfun)....
 </script>
-
+States of Promise - 
+1. Pending - initial state, neither fulfilled nor rejected.
+2. Filled - meaning that the operation completed successfully.
+3. Rejected - meaning that the operation failed.
 -------------------------------------------------------------------------
 _______________Javascript Object Creation in diff Ways_______________________
 
