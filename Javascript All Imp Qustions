@@ -478,6 +478,27 @@ function myFunction() {
     document.querySelector(".example").style.backgroundColor = "red"; // Will apply on h2
 }
 </script>
+
+Multiple tags/classes -
+<h3>A h3 element</h3>
+<h2>A h2 element</h2>
+<script>
+document.querySelector("h2, h3").style.backgroundColor = "red"; // Will apply on h3 only.
+</script>
+
+QuerySelectorAll -
+<h2 class="example">A heading with class="example"</h2> This is -> x[0]
+<p class="example">A paragraph with class="example".</p> This is -> x[1]
+<button onclick="myFunction()">Try it</button>
+<script>
+function myFunction() {
+    var x = document.querySelectorAll(".example");
+     x[1].style.backgroundColor = "red"; // will apply on para only.
+    for(i =0; i<x.length; i++){
+      x[i].style.backgroundColor = "red"; // will apply on both.
+    }
+}
+</script>
 ______________________________Javascript eval function_________________________
 The eval() function evaluates or executes an argument.
 If the argument is an expression, eval() evaluates the expression. 
