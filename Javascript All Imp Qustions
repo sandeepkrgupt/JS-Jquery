@@ -11,31 +11,7 @@ function myFunction(x,y) {
 document.getElementById("demo").innerHTML = myFunction();
 </script>
 // output - helloindia
-<script>
-function myFunction(x,y) {
-   x = "hello";
-   y = "india";
-   return ;
-}
-document.getElementById("demo").innerHTML = myFunction();
-</script>
-// output - undefined
-<script>
-function myFunction(x,y) {
-x = "hello";
-y = "india";
-return x + (y = "USA");
-}
-document.getElementById("demo").innerHTML = myFunction();
-</script>
-// output - helloUSA
-<script>
-function myFunction(x,y) {
-return  x+y;  // if we return x+y output - 1 (IF WE WRITE TWO RETURN STATEMENT, FIRST WILL RETURN VALUE.HERE x+y WILL BE RETURNED.)
-return x*y   // if we return x*y output - 0
-}
-document.getElementById("demo").innerHTML = myFunction(true,false);
-</script>
+
 ----------------------------------------------------------------------------
 Constructor - 
 Constructor is special method which creates object of the existing class using new kewword.
