@@ -353,7 +353,6 @@ But When -
 // output - x is not defined.
 ----------------------------------------------------------------------------
 ___________________Javascript Promises______________________________________
-promises are used to call funtions one after another in a sequence if the first function completed successfully.
 The Promise object returns the eventual completion/success or failure of assynchronous operation and its resulting value.
 Syntax - 
 new Promise( /* executor */ function(resolve, reject) { ... } );
