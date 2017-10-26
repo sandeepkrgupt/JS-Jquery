@@ -1,4 +1,17 @@
 VVI NOTE - 
+Constructor - 
+Constructor is special method which creates object of the existing class using new kewword.
+Note : -
+1. Constructors have no return type.
+2. Constructors function name is same as that of class name.
+
+The important difference between constructors and methods -
+1. constructors create and initialize objects that don't exist yet, 
+   while methods perform operations on objects that already exist.
+
+2. Constructors can't be called directly; they are called implicitly when the new keyword creates an object. 
+   Methods can be called directly on an object that has already been created with new.
+------------------------------------------------------------------------------
 Prototype in Javascript - 
 Every JavaScript object has a prototype. The prototype is also an object.
 All JavaScript objects inherit their properties and methods from their prototype.
