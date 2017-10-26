@@ -124,13 +124,7 @@ var x;
 </script>
 output - 0 : "hello india"
          1 : "hello usa"
-__________________________________________________________
-Hoisting is JavaScript's default behavior of moving declarations to the top.
-WHEN WE DECLARE VARIABLES TO THE TOP IS CALLED HOISTING.
-Like -
-x = ["hello india","hello usa"];
-var x;
-----------------------------------------------------------
+         
 ___________________USE STRICT FOR ERRORS_________________
 <button onclick="cc()">cc</button>
 <script>
