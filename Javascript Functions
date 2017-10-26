@@ -143,4 +143,63 @@ function demoText() {
         var x = 15;
 };
 console.log(x); //undefined
+-----------------------------------------------------------
 
+Javascript Return Statement -
+The return statement stops the execution of a function and returns a value from that function.
+<p id="demo"></p>
+<script>
+function myFunction(x,y) {
+   x = "hello";
+   y = "india";
+   return (x + y) ;
+}
+document.getElementById("demo").innerHTML = myFunction();
+</script>
+// output - helloindia
+================================
+<script>
+function myFunction(x,y) {
+   x = "hello";
+   y = "india";
+   return ;
+}
+document.getElementById("demo").innerHTML = myFunction();
+</script>
+// output - undefined
+=============================
+<script>
+function myFunction(x,y) {
+x = "hello";
+y = "india";
+return x + (y = "USA");
+}
+document.getElementById("demo").innerHTML = myFunction();
+</script>
+// output - helloUSA
+=====================================
+<script>
+function myFunction(x,y) {
+return  x+y;  // if we return x+y output - 1 (IF WE WRITE TWO RETURN STATEMENT, FIRST WILL RETURN VALUE.HERE x+y WILL BE RETURNED.)
+return x*y   // if we return x*y output - 0
+}
+document.getElementById("demo").innerHTML = myFunction(true,false);
+</script>
+<script>
+function myFunction(x,y) {
+return x+y;
+  function shw(x,y){
+      return x-y;
+  }
+}
+document.getElementById("demo").innerHTML = myFunction(5,3);  // 8
+document.getElementById("demo").innerHTML = shw(5,3); // undefined
+================================
+<script>
+function myFunction(x,y) {
+ x = 12;
+ y = 15;
+return x+y;
+}
+document.getElementById("demo").innerHTML = myFunction(5,3);
+</script> // output 27
