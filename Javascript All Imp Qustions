@@ -419,13 +419,13 @@ States of Promise -
 -------------------------------------------------------------------------
 _______________Javascript Object Creation in diff Ways_______________________
 
-1. By using new keyword;
+1. By using new keyword;  // using constructor
 var obj = new Object();
 
-2. By using object.create
+2. By using object.create   // using create method
 var obj = object.create(null);
 
-3. by using {}
+3. by using {}             // using literal
 var obj = {id : 1, name : 'san'}
 
 4. by using this keyword.
