@@ -410,7 +410,7 @@ resolve({'data': 'marine'});
 return promisetwo;
 }
 // calling in sequence
-firstfun().then(secondfun).... // then() function is used to call promises in sequence.
+firstfun().then(secondfun).... // then() function is used to call promises one after another.
 </script>
 States of Promise - 
 1. Pending - initial state, neither fulfilled nor rejected.
