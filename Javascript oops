@@ -1,3 +1,27 @@
+Everything in Javascript is an Object.
+Object - Every component in Javascript is an Object including Function, Array, String and Number.
+
+Creating Object -
+i) Object literal 
+var obj = {name : "san", class : 3}
+ii) constructor -
+function xyz(){
+
+}
+var obj = new xyz(arg1,arg2,...);
+iii) Prototype -
+function xyz(){}
+xyz.prototype.name = "san";
+xyz.prototype.class = 3;
+xyz.prototype.dtl = function(){
+console.log(this.name + " " + this.class);
+};
+
+Encapsulation = Hiding background details and showing the functionality is called Encapsulation.
+
+Inheritance - Inheriting or aquring all the properties of parent class to child class is called Inheritance.
+Javascript supports only Single Inheritance.
+
 Constructor - 
 Constructor is special method which creates object of the existing class using new kewword.
 Note : -
