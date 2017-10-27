@@ -13,7 +13,7 @@ JSONP is a method for sending JSON data without worrying about cross-domain issu
 JSONP does not use the XMLHttpRequest object.
 
 For Example -
-ay you're on domain example.com, and you want to make a request to domain example.net. 
+you're on domain example.com, and you want to make a request to domain example.net. 
 To do so, you need to cross domain boundaries,
 When you use a script tag, the domain limitation is ignored.
 JSONP uses the <script> tag instead.
