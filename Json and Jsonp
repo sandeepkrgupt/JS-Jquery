@@ -6,3 +6,24 @@ var cvt = json.parse(obj);
 json.stringify() - Converts Json object into json string.
 var obj = { id : 1, name : "rohit", class : 10 } // this is object type 
 var cvt = json.stringify(obj);
+
+
+------------------------------------------------------------------------------------
+JSONP is a method for sending JSON data without worrying about cross-domain issues.
+JSONP does not use the XMLHttpRequest object.
+
+For Example -
+ay you're on domain example.com, and you want to make a request to domain example.net. 
+To do so, you need to cross domain boundaries,
+When you use a script tag, the domain limitation is ignored.
+JSONP uses the <script> tag instead.
+
+Link php using script tag -
+<script src="demo_jsonp.php">
+
+Inside Php file  -
+<?php
+$myJSON = '{ "name":"John", "age":30, "city":"New York" }';
+
+echo "myFunc(".$myJSON.");";
+?>
