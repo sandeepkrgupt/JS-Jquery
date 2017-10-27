@@ -32,6 +32,18 @@ $(document).ready(function(){
 
 when we use dataType:'application/json' it will show parser error , because when we return data 
 that is not fully json, so parser fails to convert it and thus generate this error.
+
+GET Vs POST -
+GET requests can be cached
+GET requests remain in the browser history
+GET requests can be bookmarked
+GET requests should never be used when dealing with sensitive data
+GET requests have length restrictions
+
+POST requests are never cached
+POST requests do not remain in the browser history
+POST requests cannot be bookmarked
+POST requests have no restrictions on data length
 -----------------------------------------------------------------------------------------------
 Using Jquery load() -
 <script>
@@ -46,5 +58,24 @@ $(document).ready(function(){
     });
 });
 </script>
+--------------------------------------------------------------------------------------------------
+JQuery noconflict -
 
+<script>
+var jq = $.noConflict();
+jq(document).ready(function(){
+    jq("button").click(function(){
+        jq("p").text("jQuery is still working!");
+    });
+});
+</script>
+
+<script>
+$.noConflict();
+jQuery(document).ready(function(){
+    jQuery("button").click(function(){
+        jQuery("p").text("jQuery is still working!");
+    });
+});
+</script>
 
