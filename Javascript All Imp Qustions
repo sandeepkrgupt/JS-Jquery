@@ -1,3 +1,14 @@
+How to get type od variable is an array ?
+
+// Returns if a value is an array
+function isArray (value) {
+return value && typeof value === 'object' && value.constructor === Array;
+};
+
+// ES5 actually has a method for this (ie9+)
+Array.isArray(value);
+
+----------------------------------------------------------------
 What is typeof operator in JS -
 <script>
 var myCar;
@@ -14,6 +25,7 @@ document.getElementById("demo").innerHTML =
     typeof null;                          object
 </script>
 NOTE : - You cannot use typeof to determine if a JavaScript object is an array (or a date).
+-------------------------------------------------
 
 VVI NOTE - 
 Javascript Return Statement -
