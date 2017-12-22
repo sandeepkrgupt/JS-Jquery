@@ -1,3 +1,18 @@
+What is typeof operator in JS -
+<script>
+var myCar;
+document.getElementById("demo").innerHTML = 
+    typeof "john" + "<br>" +              string
+    typeof 3.14 + "<br>" +                number
+    typeof NaN + "<br>" +                 number
+    typeof false + "<br>" +               boolean
+    typeof [1,2,3,4] + "<br>" +           object
+    typeof {name:'john', age:34} + "<br>" +  object
+    typeof new Date() + "<br>" +          object
+    typeof function () {} + "<br>" +      function
+    typeof myCar + "<br>" +               undefined
+    typeof null;                          object
+</script>
 VVI NOTE - 
 Javascript Return Statement -
 The return statement stops the execution of a function and returns a value from that function.
