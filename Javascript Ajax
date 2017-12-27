@@ -3,6 +3,13 @@ ____________________________Javascript Ajax________________________
 -------------------------------------------------------------------
 Ajax is a tequnic to load content from server without postback or page refresh.
 
+--------------- Diff b/w Synchronous and Asynchronous -----------------------
+
+XMLHttpRequest supports both synchronous and asynchronous communications. 
+In general, however, asynchronous requests should be preferred to synchronous requests for performance reasons.
+Synchronous requests block the execution of code which creates "freezing" on the screen and an unresponsive user experience. 
+
+--------------------------------------------------------------
 <p id="demo"></p>
 <button onclick="loadAjax()"></button>
 <script>
