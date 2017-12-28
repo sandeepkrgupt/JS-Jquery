@@ -1,3 +1,11 @@
+What happens when Async is false in Ajax Request ?
+
+XMLHttpRequest supports both synchronous and asynchronous communications. 
+In general, however, asynchronous requests should be preferred to synchronous requests for performance reasons.
+
+Synchronous requests block the execution of code which creates "freezing" on the screen and an unresponsive user experience. 
+
+-------------------------------------------------------------------
 How to get type of variable is an array ?
 
 // Returns if a value is an array
