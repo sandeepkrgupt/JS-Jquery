@@ -11,3 +11,24 @@ this.ractive.on('*.onBlurContact', function (event) {
 			self.ractive.set('isValidData', isValid.valid);
 			return isValid;
 		});
+
+
+-----------------------------------------------------------------
+
+onKeepNumberChanged: function (selected) {
+			if (!selected) {
+				this.setReadyState(false);
+				return;
+			}
+
+			if (selected === 'current_number') {
+				this.setReadyState(this.ractive.get('isNumberValid'));
+				//var configuration = this.ractive.get('configuration');
+				this.ractive.set('ConfiguratorUpdateTopic.configurationChanges', {
+					hasFaxDuetISDNLineHunt: true,
+					apiCallRequired: true
+				});
+			} else {
+				this.setReadyState(true);
+			}
+		},
