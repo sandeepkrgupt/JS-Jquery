@@ -1,0 +1,13 @@
+this.ractive.on('*.onBlurContact', function (event) {
+			this.contactNumber = new RactiveValidate(this, {
+				'productsAndServices.alertOptionData.altMobileNum': {   // configuration.keep_number.checkNumber
+					phoneValidator: 'Invalid phone number', //primaryContactNumber
+					required: 'Please enter details'  //required
+				}
+			});
+			this.contactNumber.cwd = '';
+			this.contactNumber.patterns.phoneValidator = RactiveHelpers.phoneValidator;
+			var isValid = this.contactNumber.validate();
+			self.ractive.set('isValidData', isValid.valid);
+			return isValid;
+		});
