@@ -32,3 +32,16 @@ onKeepNumberChanged: function (selected) {
 				this.setReadyState(true);
 			}
 		},
+
+-------------------------------------------------------------
+
+
+return {
+
+		initRactiveWidget: function (options) {
+			return new Widget(options);
+		}
+	};
+	
+	
+--------------------------------------------------------------
