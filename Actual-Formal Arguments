@@ -1,0 +1,13 @@
+<script>
+function findMax(x) { // Formal Argument
+    return x*x;
+} 
+
+function render(){
+	var ab = findMax(6); // Actual Argument
+	console.log("aa",ab);
+}
+render();
+</script>
+
+Output - 36
