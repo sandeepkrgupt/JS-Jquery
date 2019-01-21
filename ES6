@@ -1,0 +1,278 @@
+function add(a, b = 1) { 
+   return a + b; 
+} 
+console.log(add(4,2))
+The above code sets the value of the parameter b explicitly to 2, thereby overwriting its default value. 
+The following output is displayed on successful execution of the above code.
+
+6
+
+------------------------
+Rest Parameters (spread operator)
+Rest parameters are similar to variable arguments in Java. Rest parameters doesn’t restrict the number of 
+values that you can pass to a function. However, the values passed must all be of the same type. In other words, 
+rest parameters act as placeholders for multiple arguments of the same type.
+
+To declare a rest parameter, the parameter name is prefixed with three periods, known as the spread operator. 
+The following example illustrates the same.
+
+function fun1(...params) { 
+   console.log(params.length); 
+}  
+fun1();  
+fun1(5); 
+fun1(5, 6, 7); 
+The following output is displayed on successful execution of the above code.
+0 
+1 
+3
+
+-------------------------
+Arrow Func.
+var foo = (x)=>10+x 
+console.log(foo(10)) 
+	20	
+var msg = ()=> { 
+   console.log("function invoked") 
+} 
+msg() 
+
+----------------------
+func. hoisting
+
+hoist_function();  
+function hoist_function() { 
+   console.log("foo"); 
+} 
+The following output is displayed on successful execution of the above code.
+foo 
+However, function expressions cannot be hoisted. The following code snippet illustrates the same.
+
+hoist_function(); // TypeError: hoist_function() is not a function  
+var hoist_function() = function() { 
+   console.log("bar"); 
+};
+
+-------------------------
+Generator Functions
+When a normal function is invoked, the control rests with the function called until it returns. 
+With generators in ES6, the caller function can now control the execution of a called function. 
+A generator is like a regular function except that −
+
+The function can yield control back to the caller at any point.
+When you call a generator, it doesn’t run right away. 
+Instead, you get back an iterator. The function runs as you call the iterator’s next method.
+function* ask() { 
+   const name = yield "What is your name?"; 
+   const sport = yield "What is your favorite sport?"; 
+   return `${name}'s favorite sport is ${sport}`; 
+}  
+const it = ask(); 
+console.log(it.next()); 
+console.log(it.next('Ethan'));  
+console.log(it.next('Cricket'));
+---------------------------
+page redirect in JS
+window.location = "http://www.xyz.com";
+window.location.assign("http://www.abc.org"); 
+assign() vs. replace()
+
+The difference between assign() and replace() method is that the location.replace() method 
+deletes the current URL from the document history, so it is unable to navigate back to the original document. 
+You can't use the browsers "Back" button in this case. If you want to avoid this situation, you should use 
+location.assign() method, because it loads a new Document in the browser.
+
+location.reload()
+
+The location.reload() method reloads the current document in the browser window.
+
+Following is the syntax for the same.
+
+window.location.reload("http://www.yahoo.com");
+window.navigate()
+
+The window.navigate() method is similar to assigning a new value to the window.location.href property. 
+Because it is only available in MS Internet Explorer, so you should avoid using this in cross-browser development.
+
+Following is the syntax for the same.
+
+window.navigate("http://www.abc.com"); 
+
+objects
+
+var foo = 'bar' 
+var baz = { foo } 
+console.log(baz.foo)
+The following output is displayed on successful execution of the above code.
+
+bar
+The Object.create Method
+Objects can also be created using the Object.create() method.
+The Object.assign() Function
+Object.assign(target, ...sources)    
+Deleting Properties
+var myobj = new Object; 
+myobj.a = 5; 
+delete myobj.a; 
+
+-----------------
+Object De-structuring
+The term destructuring refers to breaking up the structure of an entity. The destructuring assignment syntax 
+in JavaScript makes it possible to extract data from arrays or objects into distinct variables.
+var emp = { name: 'John', Id: 3 } 
+var {name, Id} = emp 
+console.log(name) 
+console.log(Id)
+-----------
+some aray methods
+filter()
+Creates a new array with all of the elements of this array for which the provided filtering function returns true.
+forEach()
+Calls a function for each element in the array.
+join()
+Joins all elements of an array into a string.
+pop()
+Removes the last element from an array and returns that element
+push()
+Adds one or more elements to the end of an array and returns the new length of the array.
+reverse()
+Reverses the order of the elements of an array -- the first becomes the last, and the last becomes the first.
+shift()
+Removes the first element from an array and returns that element slice.
+slice()
+Extracts a section of an array and returns a new array.
+sort()
+Sorts the elements of an array.
+splice()
+Adds and/or removes elements from an array.
+unshift()
+Adds one or more elements to the front of an array and returns the new length of the array.
+-----------------
+ES6 − Array Methods
+var numbers = [1, 2, 3]; 
+var oddNumber = numbers.find((x) => x % 2 == 1); 
+console.log(oddNumber); // 1
+
+var numbers = [1, 2, 3]; 
+var oddNumber = numbers.findIndex((x) => x % 2 == 1); 
+console.log(oddNumber); // 0 
+
+var numbers = [1, 2, 3]; 
+var val = numbers.entries(); 
+console.log(val.next().value);  
+console.log(val.next().value); // output [0,1] [1.2] 
+
+Array.prototype.keys()
+console.log(Array.from(['a', 'b'].keys())) // output [0,1]
+--------------
+Array De-structuring
+var arr = [12,13] 
+var[x,y] = arr 
+console.log(x) 
+console.log(y) // output 12,13
+---------------------
+ES6 introduces two new data structures: Maps and Sets.
+
+Maps − This data structure enables mapping a key to a value.
+
+Sets − Sets are similar to arrays. However, sets do not encourage duplicates.
+
+var map = new Map(); 
+map.set('name','Tutorial Point'); 
+map.get('name'); // Tutorial point
+The above example creates a map object. The map has only one element. The element key is denoted by name. 
+The key is mapped to a value Tutorial point.
+
+var map = new Map(); 
+map.set(1,true); 
+console.log(map.has("1")); //false 
+
+map.set("1",true); 
+console.log(map.has("1")); //true
+-----------------
+get()
+The get() function is used to retrieve the value corresponding to the specified key.
+var roles = new Map([ 
+   ['r1', 'User'], 
+   ['r2', 'Guest'], 
+   ['r3', 'Admin'], 
+]);  
+console.log(roles.get('r2')) //output Guest
+----------------------
+Object-Oriented Programming Concepts
+To begin with, let us understand
+
+Object − An object is a real-time representation of any entity. According to Grady Brooch, every object is said to have 3 features −
+
+State − Described by the attributes of an object.
+
+Behavior − Describes how the object will act.
+
+Identity − A unique value that distinguishes an object from a set of similar such objects.
+
+Class − A class in terms of OOP is a blueprint for creating objects. A class encapsulates data for the object.
+
+Method − Methods facilitate communication between objects.
+
+class-
+class Polygon { 
+   constructor(height, width) { 
+      this.height = height; 
+      this.width = width; 
+   } 
+}
+var Polygon = class { 
+   constructor(height, width) { 
+      this.height = height; 
+      this.width = width; 
+   } 
+}
+
+Class Inheritance
+
+use strict' 
+class Shape { 
+   constructor(a) { 
+      this.Area = a
+   } 
+} 
+class Circle extends Shape { 
+   disp() { 
+      console.log("Area of the circle:  "+this.Area) 
+   } 
+} 
+var obj = new Circle(223); 
+obj.disp()
+-------------------
+Inheritance can be classified as −
+
+Single − Every class can at the most extend from one parent class.
+
+Multiple − A class can inherit from multiple classes. ES6 doesn’t support multiple inheritance.
+
+Multi-level − Consider the following example.
+---------------
+The Super Keyword
+ES6 enables a child class to invoke its parent class data member. This is achieved by using the super keyword. 
+The super keyword is used to refer to the immediate parent of a class.
+'use strict' 
+class PrinterClass { 
+   doPrint() {
+      console.log("doPrint() from Parent called…") 
+   } 
+}  
+class StringPrinter extends PrinterClass { 
+   doPrint() { 
+      super.doPrint() 
+      console.log("doPrint() is printing a string…") 
+   } 
+} 
+var obj = new StringPrinter() 
+obj.doPrint()
+//output
+doPrint() from Parent called. 
+doPrint() is printing a string. 
+
+
+		https://www.codeproject.com/Articles/1065184/Latest-Gulp-js-interview-questions
+		https://www.tutorialspoint.com/gulp/index.htm
