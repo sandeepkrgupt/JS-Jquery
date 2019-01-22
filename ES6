@@ -273,6 +273,93 @@ obj.doPrint()
 doPrint() from Parent called. 
 doPrint() is printing a string. 
 
+------------------------------
+Promises are a clean way to implement async programming in JavaScript (ES6 new feature). 
+simple example :-
+var promise = new Promise(function(resolve , reject) {    
+   // do a thing, possibly async , then..  
+   if(/*everthing turned out fine */)    resolve("stuff worked");  
+   else     
+   reject(Error("It broke"));  
+});  
+return promise;
+// Give this to someone
 
-		https://www.codeproject.com/Articles/1065184/Latest-Gulp-js-interview-questions
-		https://www.tutorialspoint.com/gulp/index.htm
+Using Promises :-
+function getSum(n1, n2) {   
+   varisAnyNegative = function() {   
+      return n1 < 0 || n2 < 0;   
+   }   
+   var promise = new Promise(function(resolve, reject) {   
+      if (isAnyNegative()) {   
+         reject(Error("Negatives not supported"));   
+      }   
+      resolve(n1 + n2)
+   });   
+   return promise;   
+} 
+
+getSum(5, 6)   
+.then(function (result) {   
+   console.log(result);   
+},   
+function (error) {   
+   console.log(error);   
+});
+
+we can pass multiple then.
+//output -11
+This shows getSum() is called in async style or non-blocking style. Promise gives a nice and clean way to deal with the Callbacks.
+
+--------------------------------
+MOdules
+Consider a scenario where parts of JavaScript code need to be reused. ES6 comes to your rescue with the concept of Modules.
+A module is nothing more than a chunk of JavaScript code written in a file. 
+Syntax
+import {element_name1,element_name2,....} from module_name
+
+Example -
+
+function display_message() { 
+   console.log("Hello World") 
+} 
+export default display_message
+
+Importing the module: consume_module.js
+
+import display_message from './MessageModule.js' 
+display_message() 
+---------------------
+Error Handling
+var a = 100; 
+var b = 0; 
+try { 
+   if (b == 0 ) { 
+      throw(“Divide by zero error.”); 
+   } else { 
+      var c = a / b; 
+   } 
+} 
+catch( e ) { 
+   console.log("Error: " + e ); 
+}
+//output - Error: Divide by zero error
+---------------
+onerror Method
+
+<html> 
+   <head> 
+      <script type = "text/javascript"> 
+         window.onerror  =  function () {  
+            document.write ("An error occurred.");  
+         } 
+      </script> 
+   </head> 
+
+   <body> 
+      <p>Click the following to see the result:</p> 
+      <form> 
+         <input type = "button" value = "Click Me" onclick = "myFunc();" /> 
+      </form> 
+   </body> 
+</html
