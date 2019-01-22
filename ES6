@@ -1,3 +1,20 @@
+ES-6 Features -
+Support for constants
+Block Scope
+Arrow Functions
+Extended Parameter Handling
+Template Literals
+Extended Literals
+Enhanced Object Properties
+De-structuring Assignment
+Modules
+Classes
+Iterators
+Generators
+Collections
+New built in methods for various classes
+Promises
+---------------------------------------
 function add(a, b = 1) { 
    return a + b; 
 } 
