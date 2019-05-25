@@ -301,12 +301,13 @@ _______________________Closure_______________________________
 Global variables can make local using Closure
 Closures are inner function that has access to outer function variables.
 <script>
-Var mycounter = function(){
+var mycounter = function(){
 alert('this is outer fun');
 };
-Function myFun(){
+function myFun(){
 document.getElementById(“demo”).innerHTML = mycounter();
 }
+myFun();
 </script>
 or
 <script>
@@ -316,8 +317,9 @@ function outer(j){
         var i ="am inner fun";
         console.log(i + j);
     }
+    inner("aa","dd");
 }
-document.getElementById(“demo”).innerHTML = outer();
+document.getElementById(“demo”).innerHTML = outer("qq","www");
 </script>
 
 -----------------------------------------------------------------------
