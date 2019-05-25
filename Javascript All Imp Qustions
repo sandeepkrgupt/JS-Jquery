@@ -181,6 +181,7 @@ function clc(){
 x = ["hello india","hello usa"];
 console.log(x);
 }
+clc();
 </script>
 output - 0 : "hello india"
          1 : "hello usa"
@@ -191,6 +192,7 @@ x = ["hello india","hello usa"];
 console.log(x);
 var x;
 }
+clc();
 </script>
 output - 0 : "hello india"
          1 : "hello usa"
