@@ -172,7 +172,7 @@ ____________________________________________________________________
   output -
   Next Line
   Query Finished
- -------------------------------------------------------------------
+ ---------------------JAVASCRIPT HOISTING ----------------------------------------------
  we can use variable before it has been declared.
 <p id="demo"></p>
 <button onclick="clc()">cc</button>
