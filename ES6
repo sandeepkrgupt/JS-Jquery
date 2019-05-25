@@ -55,22 +55,43 @@ var msg = ()=> {
 msg() 
 
 ----------------------
-func. hoisting
+function hoisting
 
 hoist_function();  
 function hoist_function() { 
    console.log("foo"); 
 } 
-The following output is displayed on successful execution of the above code.
-foo 
-However, function expressions cannot be hoisted. The following code snippet illustrates the same.
+output :- foo 
 
-hoist_function(); // TypeError: hoist_function() is not a function  
-var hoist_function() = function() { 
+However, function expressions cannot be hoisted. The following code snippet illustrates the same.
+hoist_function();
+var hoist_function = function() { 
    console.log("bar"); 
 };
-
+output - hoist_function is not a function.
+if :-
+var a = 'bar';
+var hoist_function = function() { 
+   console.log(a); 
+   var a = 'ss';
+};
+hoist_function(); // undefined (means it's hoisted, and i have declared the variable but not assigned any value)
+----------------------
+let a = 'bar';
+let hoist_function = function() { 
+   console.log(a); 
+   let a = 'ss';
+};
+hoist_function(); // Cannot access 'a' before initialization
 -------------------------
+var a = 'bar';
+(function(){ // self involking function
+	console.log(a);
+  var a = 'aa';
+  console.log(a);
+})();
+output :- undefined, aa
+-----------------------
 Generator Functions
 When a normal function is invoked, the control rests with the function called until it returns. 
 With generators in ES6, the caller function can now control the execution of a called function. 
